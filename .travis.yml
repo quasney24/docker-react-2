@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t zquasney/docker-react2 -f docker-compose.yml .
+  - docker build -t zquasney/docker-react2 -f ./client/Dockerfile .
 
 script:
   - docker run -e CI=true zquasney/docker-react2 npm run test
